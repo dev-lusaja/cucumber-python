@@ -1,6 +1,10 @@
 from behave import *
 
-@given('I have a calculator')
+@given('I power on the calculator')
+def step_impl(context):
+	context.power_on = True 
+
+@given('I take the calculator')
 def step_impl(context):
 	context.current_value = 0
 
