@@ -24,6 +24,10 @@ def step_impl(context, first_value, second_value):
 def step_impl(context, first_value, second_value):
 	context.current_value = first_value / second_value
 
+@when("I potentiate {first_value:d} and {second_value:d}")
+def step_impl(context, first_value, second_value):
+	context.current_value = first_value ** second_value
+
 @then("the result should be {expected_value:d}")
 def step_impl(context, expected_value):
     assert context.current_value == expected_value

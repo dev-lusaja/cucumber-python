@@ -25,3 +25,12 @@ Feature: Calculator
 		Given I take the calculator
 		When I divide 6 and 2
 		Then the result should be 3
+
+	Scenario Outline: Potentiate two numbers
+		Given I take the calculator
+		When I potentiate <base> and <potence>
+		Then the result should be <result>
+
+		Examples:
+			| base | potence | result |
+			|	6  |	2	 |	36	  |
